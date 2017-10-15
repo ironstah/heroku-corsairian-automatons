@@ -59,7 +59,7 @@ CorsairianBot1.on('message', (message) => {{
         message.channel.send("Nice.");
     }
     
-    if(message.content.startsWith(PREFIX + "start vote") && message.author.username == "Pen54321") {
+    if(message.content.startsWith(PREFIX + "start vote") && message.author.username == "SpeakerColonia") {
         let member = message.mentions.members.first();
         message.channel.send(`Vote for ${member.user.username} by putting a reaction on this comment with a checkmark for a vote.`);
     } else if (message.content.startsWith(PREFIX + "commands")) {
@@ -147,15 +147,15 @@ CorsairianBot2.on('message', (message) => {{
         message.delete();
         message.channel.send("Silly civilian. Your votes don't matter.");
     }
-    if (message.content.startsWith(PREFIX + "kick") && message.author.username == "Pen54321") {
+    if (message.content.startsWith(PREFIX + "kick") && message.author.username == "SpeakerColonia") {
         let member = message.mentions.members.first();
         member.kick();
         message.channel.send("Finally that taee kgnus-zo zehanmus is gone, for now.");
-    } else if (message.content.startsWith(PREFIX + "ban") && message.author.username == "Pen54321") {
+    } else if (message.content.startsWith(PREFIX + "ban") && message.author.username == "SpeakerColonia") {
         let member = message.mentions.members.first();
         member.ban();
         message.channel.send("Raejael, that felt good. To see someone gone that has been causing a disturbance to the server.");
-    } else if (message.content.startsWith(PREFIX + "purge") && message.author.username == "Pen54321") {
+    } else if (message.content.startsWith(PREFIX + "purge") && message.author.username == "SpeakerColonia") {
         const args = message.content.split(/\s+/g).slice(1);
         let messagecount = parseInt(args[0]);
   message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages));
